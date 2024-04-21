@@ -1,0 +1,92 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+*,html,body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:cursive;
+}
+
+nav {
+  background:#1f1f1f;
+  padding: .1rem 2%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.nav-container {
+  justify-content: space-between;
+}
+
+.nav-container .nav-brand{
+  color: #fff;
+}
+
+.nav-container span {
+ color: crimson; 
+}
+
+.nav-container #hamburger-menu{
+  display: none;
+  border: none;
+  background: none;
+  color: crimson;
+}
+
+.nav-container .nav-menu {
+  margin: auto;
+  gap: 20px;
+}
+
+.nav-container .nav-menu .text-active {
+  color: crimson;
+}
+
+.nav-container .nav-menu li {
+  list-style-type: none;
+}
+
+.nav-container .nav-menu a {
+  text-decoration: none;
+}
+
+@media screen and (max-width:1366px) {
+  html {
+    font-size: large;
+  }
+}
+
+@media screen and (max-width:768px) {
+  html {
+    font-size: medium;
+  }
+
+ .nav-container #hamburger-menu {
+    display: flex;
+  }
+
+ nav .nav-container .nav-menu {
+    position: absolute;
+    background-color: #1f1f1f;
+    top: -100%;
+    right: -100%;
+    left: -100%;
+    height: 50%;
+    z-index: -1;
+    transition: all ease-in-out 1.2s;
+  }
+
+ nav .nav-container .nav-menu.active{
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+
+  .nav-container .nav-menu {
+    display: flex;
+    justify-content: center;
+   align-items: center;
+   flex-direction: column;
+  }
+}
